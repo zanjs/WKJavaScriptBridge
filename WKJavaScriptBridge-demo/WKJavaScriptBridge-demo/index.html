@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>WKJSBridge</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+            <script type="text/javascript" src="WKJSBridge.js" ></script>
+            <script language="javascript">
+                
+                function pokeNative() {
+                    
+                    //功能模块
+                    var service = 'WKCommonPlugin';
+                    //具体功能
+                    var action = 'asynDisplayCommon';
+                    //业务参数
+                    var command = {
+                        'url':'https:www.baidu.com'
+                    }
+                    window.WKJSBridge.callNative(service, action, command, function success(res) {
+                                                     document.getElementById("returnValue").value = res.result;
+                                                 }, function fail(res) {
+                                                     document.getElementById("returnValue").value = res.result;
+                                                 });
+                }
+            
+            </script>
+    </head>
+    
+    <body>
+        <h1>按钮调用</h1>
+        <input type="button" value="调用客户端" onclick="pokeNative()" />
+        
+        
+        <h1>回调结果展示区</h1>
+        <textarea id ="returnValue" type="value" rows="5" cols="40">
+        
+        </textarea>
+        
+        
+    </body>
+
+</html>
