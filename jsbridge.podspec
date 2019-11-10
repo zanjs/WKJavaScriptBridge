@@ -15,8 +15,9 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "jsbridge"
-  spec.version      = "0.0.1"
+  spec.name         = "WKJavaScriptBridge"
+
+  spec.version      = "1.0.1"
   spec.summary      = "A short description of jsbridge."
 
   # This description is used to generate tags and improve search results.
@@ -90,8 +91,9 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = "WKJavaScriptBridge-demo/WKJavaScriptBridge-demo/WKJavaScriptBridge/**/*"
   spec.exclude_files = "Classes/Exclude"
+  spec.resources = "WKJavaScriptBridge/WKJSBridge.js"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -130,7 +132,7 @@ Pod::Spec.new do |spec|
   #  you can include multiple dependencies to ensure it works.
 
   # spec.requires_arc = true
-
+  spec.platform = :ios, '8.0'
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
